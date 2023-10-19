@@ -40,9 +40,11 @@ sigan register
 
 # ⚠️ Restrictions
 
+- 이 프로젝트는 미숙한 어린이가 만든 프로젝트로 이상한 코드와 좋지 않은 구현들이 많습니다. 곧 새롭고 더 나은 프로젝트가 될 수 있도록 노력하겠습니다.
+
 - 최대 120일 후의 메시지 예약을 설정할 수 있습니다.
 - 동일한 채널에 5분 이내에 게시할 30개 이상의 메시지를 예약할 수 없습니다.
-	- -  [Slack API reference](https://api.slack.com/methods/chat.scheduleMessage#restrictions)
+	-  [Slack API reference](https://api.slack.com/methods/chat.scheduleMessage#restrictions)
 
 - 설정된 알람이 5분 이내에 전송될 경우 삭제가 불가능하다는 에러를 발생시킵니다.
 - 이는 공식문서에서는 1분 이내라고 안내되어 있지만 버그로 인한 것인지 API에선 "OK"를 반환하지만 백그라운드에서 실패합니다.
@@ -184,10 +186,10 @@ sigan chinv <alarm_id> <interval>
 
 ex) `sigan chinv 1 wed`
 
-# 🆕 Future Updates
+# ⏭ What's next?
 
-1. 구글 캘린더와의 연동
-2. Slack slash command와의 연동
+1. Interworking with Google Calendar
+2. Add slack slash command
 
 
 # 🚮 Uninstalling
