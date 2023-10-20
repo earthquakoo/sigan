@@ -18,7 +18,7 @@ Although it has not been officially approved by Slack yet, it will be approved i
 
 
 Once you have downloaded the "Sigan Slack App" through the link, you will receive a message as shown below. Check if the team ID has arrived in the message and copy it!
-![[register1.png]]
+![](image/register1.png)
 
 Next, make sure that Python is version `3.9` or higher. Then enter the following commands in the terminal:
 
