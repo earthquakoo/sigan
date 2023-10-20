@@ -1,65 +1,67 @@
 <h1 align="center">🙏 Sigan - Very simple CLI slack alarm manager 🙏</h1>
 
-<h4 align="center">간단한 CLI를 통해 알람을 설정할 수 있는 편리한 앱입니다. 간단한 명령으로 Slack에 알람을 만들어 보세요!.</h4>
+<h4 align="center">A convenient app that allows you to set alarms through a simple CLI. Create alarms in Slack with simple commands!</h4>
 
-# 🛎 Current Version `0.1.20`
+# 🛎 Current Version `0.1.19`
 
 #### Upgrade with `pip install sigan --upgrade`
 
 # 🚀 Installation & Settings
 
 
-먼저 아래 버튼 링크를 통해 slack app을 다운로드 받아야 합니다.
-(링크 우측 상단에 설치하실 워크스페이스를 선택하실 수 있습니다.)
+First, you need to download the Slack app by clicking the link below.
+(You can choose the workspace where you want to install it in the upper right corner of the link.)
 
 <h5 align="center"><a href="https://slack.com/oauth/v2/authorize?client_id=5494283259505.5897839296482&scope=channels:history,channels:read,chat:write,groups:read,im:history,im:read,mpim:read&user_scope="><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a></h5>
 
-아직 slack 측의 정식 승인 되지않았지만 추후 정식 승인을 받을 것입니다. 해킹 프로그램이 있는 것은 아니니 오해 안하셔도 됩니다! ><
+Although it has not been officially approved by Slack yet, it will be approved in the future. Rest assured, it is not a hacking program!
 
-링크를 통해 `Sigan Slack APP`을 다운 받으셨다면 아래와 같이 메시지가 도착합니다. 메시지에서 team id가 도착했는지 확인해주시고 복사해주세요!
+
+Once you have downloaded the "Sigan Slack App" through the link, you will receive a message as shown below. Check if the team ID has arrived in the message and copy it!
 ![[register message.png]]
 
-먼저 python이 `3.9` 버전 이상인지 확인해주세요. 이후 아래의 커맨드를 터미널에 입력합니다.
+Next, make sure that Python is version `3.9` or higher. Then enter the following commands in the terminal:
 
 ```bash
 pip install sigan
 ```
 
-설치가 끝났다면 아래의 커맨드로 등록을 진행합니다.
+After the installation is complete, proceed with registration using the following command:
 
 ```bash
 sigan register
 ```
 
-그러면 team id를 입력하라는 문구가 나오고 이전에 복사해두었던 team id를 입력합니다.
+You will be prompted to enter the team ID that you copied earlier
 ![](image/register1.PNG)
 
-올바른 team id를 입력했다면 등록이 완료되었다는 메시지가 DM으로 도착합니다.
+If you entered the correct team ID, you will receive a message confirming that the registration is complete.
 
-이제 모든 준비는 마쳤습니다! 하지만 제한 사항이 몇가지만 확인해주세요!
+Now, you are all set! However, please check a few restrictions.
 
 # ⚠️ Restrictions
 
-- 이 프로젝트는 미숙한 어린이가 만든 프로젝트로 이상한 코드와 좋지 않은 구현들이 많습니다. 곧 새롭고 더 나은 프로젝트가 될 수 있도록 노력하겠습니다.
+- This project is created by an inexperienced child and contains strange code and suboptimal implementations. We will strive to make it a new and better project.
 
-- 최대 120일 후의 메시지 예약을 설정할 수 있습니다.
-- 동일한 채널에 5분 이내에 게시할 30개 이상의 메시지를 예약할 수 없습니다.
+- You can set message reservations up to 120 days in the future.
+
+- You cannot schedule more than 30 messages within 5 minutes in the same channel.
 	-  [Slack API reference](https://api.slack.com/methods/chat.scheduleMessage#restrictions)
 
-- 설정된 알람이 5분 이내에 전송될 경우 삭제가 불가능하다는 에러를 발생시킵니다.
-- 이는 공식문서에서는 1분 이내라고 안내되어 있지만 버그로 인한 것인지 API에선 "OK"를 반환하지만 백그라운드에서 실패합니다.
+- If a scheduled message is going to be sent within 5 minutes, it cannot be deleted, resulting in an error.
+- This may be a bug, as the official documentation states within 1 minute, but the API returns "OK" while it fails in the background.
 	- [Slack API reference](https://api.slack.com/methods/chat.deleteScheduledMessage#restrictions)
 	- [Reference](https://stackoverflow.com/questions/67575370/deleted-scheduled-messages-still-sending)
 
-- Sigan bot은 하나의 slack workspace에서만 동작합니다.
-	- 만약 다른 slack workspace에서 이용하시려면 상단의 `App to Slack` 버튼 링크를 통해 새로운 slack workspace에 설치하고 다시 `sigan register`를 진행해야합니다.
-	- 또한 기존 slack workspace에 있던 sigan bot을 제거해야합니다.
+- Sigan bot operates in a single Slack workspace only.
+	- If you want to use it in a different Slack workspace, you need to install it in the new workspace through the "App to Slack" link at the top and run sigan register again.
+	- You also need to remove the existing Sigan bot from the previous Slack workspace.
 
 # 👨‍💻 Commands
 
 ## 0. Information
 
-전반적인 command의 정보를 알고 싶다면 아래의 커맨드로 확인할 수 있습니다.
+If you want to know the general information about commands, you can use the following command:
 
 ```bash
 sigan --help
@@ -67,13 +69,13 @@ sigan --help
 
 ![](image/sigan-help.PNG)
 
-더욱 구체적인 command의 정보를 알고 싶다면 아래의 커맨드로 확인할 수 있습니다.
+For more detailed information about specific commands, you can use the following command:
 
 ```bash
 sigan <command name> --help 
 ```
 
-sigan CLI의 버전은 아래의 커맨드로 확인할 수 있습니다.
+You can check the version of the Sigan CLI with the following command:
 
 ```bash
 sigan --version
@@ -86,45 +88,44 @@ sigan add <content> [-d | --deadline <deadline date>] [-t | --time <notification
 
 ### 1.1 add command rule < content >
 
-- `<content>` **필수사항**입니다. 
-- 만약 content에 공백이 있다면 `""` 을 사용해서 입력해주세요. 공백이 없다면 `""`을 생략할 수 있습니다.
-
+- `<content>` is **required**.
+- If there are spaces in the content, please use `""` to enter it. If there are no spaces, you can omit `""`.
 ### 1.2 add command rule < deadline >
 
--  `-d | --deadline <deadline date>` **선택사항**입니다. 
-- Deadline을 설정한 경우 notification time과 별개로 deadline 하루 전에 확인(confirm) 알람을 보냅니다.
-	- 만약 deadline 하루 전말고 다른 날로 설정하고 싶다면 `-b | --before` 커맨드로 deadline보다 며칠 전에 확인 알람을 보낼지 설정할 수 있습니다.
-	- Deadline을 설정하지 않는다면 확인 알람을 보내지 않습니다.
+-  `-d | --deadline <deadline date>`  is **optional**.
+- When setting a deadline, a confirmation alarm will be sent one day before the deadline, separate from the notification time.
+	- If you want to set a different number of days before the deadline instead of one day, you can use the `-b | --before` command to specify how many days before the deadline.
+	- If you don't set a deadline, a confirmation alarm will not be sent.
 
 ### 1.3 add command rule < notification time > 
 
-- `-t | --time <notification date>` 어느정도 **선택사항**입니다.
-- 시간을 설정하지 않고 날짜만 입력했을 경우 default 값인 09:00 로 설정됩니다.
-- 시간만 입력한 경우 `-i | --interval` 커맨드로 반복 주기를 설정해야합니다.
+- `-t | --time <notification date>` is somewhat **optional**.
+- If you enter a date without specifying a time, the default time of 09:00 will be set.
+- If you only enter a time, you must use the `-i | --interval` command to set the repeat interval.
 	- ex) `sigan add "notification setting" -t 12:10 -i thu`
 
 ### 1.4 add command rule < interval >
 
--  `-i | --interval <day of the week>` 어느정도 **선택사항**입니다.
-- 2개 이상의 요일에 반복해서 알람을 보내고 싶다면 `""`를 이용해 여러 요일을 선택할 수 있습니다.
+-  `-i | --interval <day of the week>` is somewhat **optional**.
+-If you want to send alarms on more than two days of the week, you can use ``""`` to select multiple days.
 	- ex) `sigan add "interval setting" -t 15:00 -i "mon fri"`
-- 알람의 날짜와 시간 모두 입력했을 경우 interval 커맨드는 사용할 수 없습니다.
+- If you have both date and time specified for the alarm, you cannot use the interval command.
 
 ### 1.5 add command rule < before >
 
--  `-b | --before <Set confirm alarm date x days before deadline>` **선택사항**입니다.
+-  `-b | --before <Set confirm alarm date x days before deadline>` is **optional**.
 	- ex) `sigan add "before test" -d 10/20 -t 14:00 -i mon -b 3`
 
 ### 1.6 add command rule < channel >
 
--  `-c | --channel <Select slack channel>` **선택사항**입니다. 
-- 채널을 선택하기 위해선 먼저 해당 채널에 Sigan bot을 초대해야합니다.
-	- Sigan bot이 초대된 채널의 이름을 입력하고 알람을 설정한면 해당 채널에 알람을 전송합니다.
-- 채널을 선택하지 않으면 Sigan bot의 DM으로 알람을 전송합니다.
+-  `-c | --channel <Select slack channel>` is **optional**.
+- To select a channel, you must first invite the Sigan bot to that channel.
+	- Enter the name of the channel where the Sigan bot was invited and the alarm will be sent to that channel.
+- If you do not select a channel, the alarm will be sent to Sigan bot's DM.
 
 ## 2. show command
 
-`show` command로 알람 이벤트를 확인할 수 있습니다.
+You can use the `show` command to check alarm events.
 
 ```bash
 sigan show
@@ -134,16 +135,16 @@ sigan show
 
 ## 3. delete command
 
-`delete` command로 기존 알람을 삭제할 수 있습니다.
+You can delete existing alarms using the `delete` command.
 
 ```bash
 sigan delete <alarm_id> [-y | --yes]
 ```
 
-`-y | --yes` 로 알람을 삭제할 때 확인 문구를 표시하지 않을 수 있습니다. 만약 설정하지 않는다면 알람을 삭제할 때 확인 문구가 출력됩니다.
+You can use `-y | --yes` to suppress the confirmation prompt when deleting alarms. If you don't use it, a confirmation prompt will be shown when deleting alarms.
 ## 4. chcnt command
 
-`chcnt` command로 기존 알람의 content를 변경할 수 있습니다.
+You can change the content of existing alarms using the `chcnt `command.
 
 ```bash
 sigan chcnt <alarm_id> <content>
@@ -152,7 +153,7 @@ sigan chcnt <alarm_id> <content>
 ex) `sigan chcnt 1 "test content change"`
 ## 5. chdl command
 
-`chdl` command로 기존 알람의 deadline을 변경할 수 있습니다. 
+You can change the deadline of existing alarms using the `chdl` command.
 
 ```bash
 sigan chdl <alarm_id> <deadline>
@@ -160,25 +161,25 @@ sigan chdl <alarm_id> <deadline>
 
 ex) `sigan chdl 1 12/25`, `sigan chdl 1 "2023/12/25"`
 
-기존 알람의 notification time보다 더 빠른 deadline은 설정할 수 없습니다.
+You cannot set a deadline that is earlier than the notification time of the existing alarm.
 ## 6. chdate command
 
-`chdate` command로 기존 알람의 notification time을 변경할 수 있습니다.
+You can change the notification time of existing alarms using the `chdate` command.
 
 ```bash
 sigan chdate <alarm_id> <date>
 ```
 
-- 시간만 변경하는 경우
+- To change only the time
 	- ex) `sigan chdate 1 -d 15:00`
-- 날짜만 변경하는 경우
+- To change only the date
 	- ex) `sigan chdate 1 10/24`, `sigan chdate 1 "2023/10/24"`
-- 날짜와 시간 모두 변경하는 경우
+- To change both the date and time
 	- ex) `sigan chdate 1 "2023/12/10 15:00"`
 
 ## 7. chinv command
 
-`chinv` command로 기존 알람의 interval을 변경할 수 있습니다.
+You can change the interval of existing alarms using the `chinv` command.
 
 ```bash
 sigan chinv <alarm_id> <interval>
@@ -194,7 +195,7 @@ ex) `sigan chinv 1 wed`
 
 # 🚮 Uninstalling
 
-진짜 설마 혹시나 천재지변의 이유로 삭제하려고 하신다면 아래의 command로 삭제할 수 있습니다..... 
+If, for some reason, you want to uninstall the app, you can do so with the following command:
 
 ```bash
 pip uninstall sigan
