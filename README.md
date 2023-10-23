@@ -2,7 +2,7 @@
 
 <h4 align="center">A convenient app that allows you to set alarms through a simple CLI. Create alarms in Slack with simple commands!</h4>
 
-# 🛎 Current Version `0.1.19`
+# 🛎 Current Version `0.1.21`
 
 #### Upgrade with `pip install sigan --upgrade`
 
@@ -12,7 +12,7 @@
 First, you need to download the Slack app by clicking the link below.
 (You can choose the workspace where you want to install it in the upper right corner of the link.)
 
-<h5 align="center"><a href="https://slack.com/oauth/v2/authorize?client_id=5494283259505.5897839296482&scope=channels:history,channels:read,chat:write,groups:read,im:history,im:read,mpim:read&user_scope="><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a></h5>
+<h5 align="center"><a href="https://siganserver.com/slack/install"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a></h5>
 
 Although it has not been officially approved by Slack yet, it will be approved in the future. Rest assured, it is not a hacking program!
 
@@ -34,7 +34,7 @@ sigan register
 
 You will be prompted to enter the team ID that you copied earlier
 ![](image/register1.PNG)
-
+``
 If you entered the correct team ID, you will receive a message confirming that the registration is complete.
 
 Now, you are all set! However, please check a few restrictions.

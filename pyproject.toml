@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "sigan"
-version = "0.1.20"
-description = "Error correction"
+version = "0.1.21"
+description = "version update"
 authors = ["Earthquakoo <cream5343@gmail.com>"]
 readme = "README.md"
 
@@ -16,6 +16,7 @@ python-dotenv = "^1.0.0"
 sqlalchemy = "^2.0.21"
 rich = "^13.6.0"
 pymysql = "^1.1.0"
+requests = "^2.31.0"
 
 
 [build-system]
