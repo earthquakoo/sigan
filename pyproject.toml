@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sigan"
-version = "0.1.21"
+version = "0.1.22"
 description = "version update"
 authors = ["Earthquakoo <cream5343@gmail.com>"]
 readme = "README.md"

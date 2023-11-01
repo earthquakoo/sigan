@@ -79,13 +79,13 @@ def change_content(data: dict):
     exit(0)
         
         
-def change_deadline(data: dict):
+def change_date(data: dict):
     resp = requests.patch(
-        cfg.base_url + "/slack/change_deadline",
+        cfg.base_url + "/slack/change_date",
         json=data
     )
     if resp.status_code == 200:
-        display.center_print("Alarm deadline changed successfully!", type="success")
+        display.center_print("Alarm date changed successfully!", type="success")
         return general_utils.bytes2dict(resp.content)
     elif resp.status_code == 400:
         detail = general_utils.bytes2dict(resp.content)['detail']
@@ -95,13 +95,13 @@ def change_deadline(data: dict):
     exit(0)
 
 
-def change_date(data: dict):
+def change_time(data: dict):
     resp = requests.patch(
-        cfg.base_url + "/slack/change_date",
+        cfg.base_url + "/slack/change_time",
         json=data
     )
     if resp.status_code == 200:
-        display.center_print("Alarm date changed successfully!", type="success")
+        display.center_print("Alarm time changed successfully!", type="success")
         return general_utils.bytes2dict(resp.content)
     elif resp.status_code == 400:
         detail = general_utils.bytes2dict(resp.content)['detail']

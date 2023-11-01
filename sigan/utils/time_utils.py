@@ -13,22 +13,6 @@ def is_valid_minute(minute: int):
     return True
 
 
-def change_deadline_to_date(deadline: str):
-    year, month, day = datetime.now().year, None, None
-    date_list = list(map(int, deadline.split('/')))
-    year, month, day = date_list
-
-    return year, month, day
-
-
-def change_datetime_to_date(alarm_date: str):
-    year, month, day = datetime.now().year, None, None
-    date_list = list(map(int, alarm_date.split('-')))
-    year, month, day = date_list
-    
-    return year, month, day
-
-
 def get_date_from_shortcut(interval_day: list, time: str):
     alarm_date = f"{datetime.now().year}-{datetime.now().month}-{datetime.now().day} {time}:00"
     alarm_date = datetime.strptime(alarm_date, '%Y-%m-%d %H:%M:%S')

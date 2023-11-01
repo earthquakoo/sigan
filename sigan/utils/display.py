@@ -19,8 +19,8 @@ def alarm_table_display(alarm_list):
     table = Table(
         Column(header="ID", justify="center", header_style=constants.TABLE_HEADER_COLOR, style=Style(color=constants.TABLE_TEXT_COLOR)),
         Column(header="Content", justify="center", header_style=Style(color=constants.TABLE_HEADER_COLOR), style=Style(color=constants.TABLE_ALARM_CONTENT_COLOR)),
-        Column(header="Deadline", justify="center", header_style=Style(color=constants.TABLE_HEADER_COLOR), style=Style(color=constants.TABLE_TEXT_COLOR)),
-        Column(header="Notification Time", justify="center", header_style=Style(color=constants.TABLE_HEADER_COLOR), style=Style(color=constants.TABLE_TEXT_COLOR)),
+        Column(header="Date", justify="center", header_style=Style(color=constants.TABLE_HEADER_COLOR), style=Style(color=constants.TABLE_TEXT_COLOR)),
+        Column(header="Time", justify="center", header_style=Style(color=constants.TABLE_HEADER_COLOR), style=Style(color=constants.TABLE_TEXT_COLOR)),
         Column(header="Interval", justify="right", header_style=Style(color=constants.TABLE_HEADER_COLOR), style=Style(color=constants.TABLE_TEXT_COLOR)),
         box=box.HORIZONTALS,
         width=100,
@@ -31,8 +31,8 @@ def alarm_table_display(alarm_list):
         alarm_id_cache[i + 1] = alarm_list[i]['alarm_id']
         table.add_row(str(i + 1),
                       str(alarm_list[i]['content']),
-                      str(alarm_list[i]['deadline']),
                       str(alarm_list[i]['alarm_date']),
+                      str(alarm_list[i]['alarm_time']),
                       str(alarm_list[i]['interval']),
                       )
         

@@ -2,7 +2,7 @@
 
 <h4 align="center">A convenient app that allows you to set alarms through a simple CLI. Create alarms in Slack with simple commands!</h4>
 
-# 🛎 Current Version `0.1.21`
+# 🛎 Current Version `0.1.22`
 
 #### Upgrade with `pip install sigan --upgrade`
 

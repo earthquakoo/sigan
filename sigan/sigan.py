@@ -26,7 +26,7 @@ def pre_command_callback(ctx: typer.Context, version: bool = typer.Option(None, 
     
     general_utils.config_setup(cfg.app_dir, cfg.config_path)
 
-    if cmd == "add" or cmd == "show" or cmd == "delete" or cmd == "chcnt" or cmd == "chdate" or cmd == "chdl" or cmd == "chinv":
+    if cmd == "add" or cmd == "show" or cmd == "delete" or cmd == "chcnt" or cmd == "chdate" or cmd == "chtime" or cmd == "chinv":
         try:
             user_info = general_utils.read_team_id(cfg.app_dir)
         except FileNotFoundError:
