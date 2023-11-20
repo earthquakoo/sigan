@@ -2,7 +2,12 @@
 
 <h4 align="center">A convenient app that allows you to set alarms through a simple CLI. Create alarms in Slack with simple commands!</h4>
 
-# 🛎 Current Version `0.1.22`
+# 🛑 Archive
+
+This project has been archived to better serve you.
+I'll come back with a better service.
+
+# 🛎 Current Version `0.1.21`
 
 #### Upgrade with `pip install sigan --upgrade`
 
@@ -18,7 +23,7 @@ Although it has not been officially approved by Slack yet, it will be approved i
 
 
 Once you have downloaded the "Sigan Slack App" through the link, you will receive a message as shown below. Check if the team ID has arrived in the message and copy it!
-![](image/register1.png)
+![[register message.png]]
 
 Next, make sure that Python is version `3.9` or higher. Then enter the following commands in the terminal:
 
@@ -33,15 +38,13 @@ sigan register
 ```
 
 You will be prompted to enter the team ID that you copied earlier
-![](image/register1.PNG)
-``
+![[register1.png]]
+
 If you entered the correct team ID, you will receive a message confirming that the registration is complete.
 
 Now, you are all set! However, please check a few restrictions.
 
 # ⚠️ Restrictions
-
-- This project is created by an inexperienced child and contains strange code and suboptimal implementations. We will strive to make it a new and better project.
 
 - You can set message reservations up to 120 days in the future.
 
@@ -67,7 +70,7 @@ If you want to know the general information about commands, you can use the foll
 sigan --help
 ```
 
-![](image/sigan-help.PNG)
+![[sigan help.png]]
 
 For more detailed information about specific commands, you can use the following command:
 
@@ -131,8 +134,7 @@ You can use the `show` command to check alarm events.
 sigan show
 ```
 
-![](image/sigan-show.PNG)
-
+![[sigan show.png]]
 ## 3. delete command
 
 You can delete existing alarms using the `delete` command.
