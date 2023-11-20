@@ -23,7 +23,7 @@ Although it has not been officially approved by Slack yet, it will be approved i
 
 
 Once you have downloaded the "Sigan Slack App" through the link, you will receive a message as shown below. Check if the team ID has arrived in the message and copy it!
-![[register message.png]]
+![](image/register1.png)
 
 Next, make sure that Python is version `3.9` or higher. Then enter the following commands in the terminal:
 
@@ -38,7 +38,7 @@ sigan register
 ```
 
 You will be prompted to enter the team ID that you copied earlier
-![[register1.png]]
+![](image/register2.PNG)
 
 If you entered the correct team ID, you will receive a message confirming that the registration is complete.
 
@@ -70,7 +70,7 @@ If you want to know the general information about commands, you can use the foll
 sigan --help
 ```
 
-![[sigan help.png]]
+![](image/sigan-help.PNG)
 
 For more detailed information about specific commands, you can use the following command:
 
@@ -134,7 +134,7 @@ You can use the `show` command to check alarm events.
 sigan show
 ```
 
-![[sigan show.png]]
+![](image/sigan-show.PNG)
 ## 3. delete command
 
 You can delete existing alarms using the `delete` command.
